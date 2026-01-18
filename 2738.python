@@ -1,0 +1,18 @@
+import sys
+
+def solve():
+    n, m = map(int, sys.stdin.readline().split())
+
+    matrix_a = []
+    for _ in range(n):
+        matrix_a.append(list(map(int, sys.stdin.readline().split())))
+
+    for i in range(n):
+        row_b = list(map(int, sys.stdin.readline().split()))
+        for j in range(m):
+            matrix_a[i][j] += row_b[j]
+
+    for row in matrix_a:
+        print(*(row))
+
+solve()
